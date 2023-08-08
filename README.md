@@ -1,28 +1,19 @@
-# React + TypeScript + Vite
+# Busca Cep
+Projeto simples front-end que consume dados de uma API pública.
+Essas são as tecnologias utilizadas no projeto:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- React e Typescript.
+- Tailwind CSS, Phosphor-cions e React-input-mask.
+- API do Viacep e Axios.
 
-Currently, two official plugins are available:
+![screenshot](https://i.ibb.co/qWnhxjx/busca-cep.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# busca-cep
+## Baixar e testar na sua máquina
+- Clone o projeto com o comando `git clone https://github.com/black-adm/busca-cep/`.
+- Após clonar o projeto, na pasta raiz digite `yarn install` ou `npm install` e rode o projeto após instalação.
+- 
+## Versão online
+> Fiz o deploy no Netlify, ainda falta algumas funcionalidades para adicionar ao projeto.
+> Clique no botão para visualizar a versão online.
+<br>
+<a href="https://projeto-buscacep.netlify.app/"><img width="" align="center" src="https://camo.githubusercontent.com/9b4f32f079772e1d06a8ac88091cc4050801eafbf0e3d4c05e6e034017188619/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6c756b656d6f72616c65732f696d6167652f75706c6f61642f76313539393738353331392f726561646d655f6c6f676f732f64656d6f5f6f6e5f6e65746c6966795f756d6a6d63682e706e67"/></a>
