@@ -3,7 +3,7 @@ Projeto simples front-end que consume dados de uma API pública.
 Essas são as tecnologias utilizadas no projeto:
 
 - React e Typescript.
-- Tailwind CSS, Phosphor-cions e React-input-mask.
+- Tailwind CSS, Phosphor-icons e React-input-mask.
 - API do Viacep e Axios.
 
 ![screenshot](https://i.ibb.co/qWnhxjx/busca-cep.png)
