@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import iconImage from '../assets/Icon.svg'
 
 export function Footer() {
@@ -15,11 +16,14 @@ export function Footer() {
                 <footer className="p-4 md:px-6 md:py-8">
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <span className="flex pt-5 sm:items-center sm:mb-0 sm:pt-0">
-                            <img
-                                src={iconImage}
-                                className="mr-3 h-8"
-                                alt="BuscaCep Logo"
-                            />
+                            <Link to='/'>
+                                <img
+                                    src={iconImage}
+                                    className="mr-3 h-8"
+                                    alt="BuscaCep Logo"
+                                />
+                            </Link>
+
 
                             <h4 className="self-center uppercase text-white tracking-wider text-lg font-extrabold whitespace-nowrap">
                                 Busca<strong className="text-red-600">Cep</strong>

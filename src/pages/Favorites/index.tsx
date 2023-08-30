@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../components/Logo";
 import { Table } from "./Table";
 import { ArrowLeft } from "@phosphor-icons/react";
+import { Footer } from "../../components/Footer";
 
 export function Favorites() {
     return (
@@ -13,14 +13,9 @@ export function Favorites() {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                <span className="flex justify-center items-center pt-28">
-                    <Link to="/">
-                        <Logo />
-                    </Link>
-                </span>
 
                 <div className="flex flex-col justify-center h-full">
-                    <div className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-lg border border-gray-200">
+                    <div className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg border border-gray-200">
                         <header className="flex items-center justify-between px-8 py-6 border-b border-gray-200">
                             <h2 className="font-semibold text-black">
                                 Endereços salvos
@@ -28,14 +23,13 @@ export function Favorites() {
 
                             <Link
                                 to='/'
-                                className="flex items-center gap-x-2 text-xs text-black font-medium"
+                                className="flex items-center gap-x-1 sm:gap-x-2 text-xs text-black font-normal sm:font-semibold tracking-tighter sm:tracking-normal"
                             >
                                 <ArrowLeft
-                                    className="hover:bg-gray-100 rounded-full "
+                                    className="hover:bg-gray-100 rounded-full text-xs sm:text-sm"
                                     color="black"
-                                    size={16}
                                 />
-                                Voltar
+                                Voltar ao inicio
                             </Link>
                         </header>
 
@@ -65,6 +59,8 @@ export function Favorites() {
                         </div>
                     </div>
                 </div>
+
+                <Footer />
             </section>
         </>
     )

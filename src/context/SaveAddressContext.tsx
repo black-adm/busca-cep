@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 
 interface Address {
     logradouro: string;
@@ -54,6 +54,16 @@ export function SaveAddressProvider({ children }: { children: React.ReactNode })
         const newAddresses = savedAddresses.filter((_, i) => i !== index);
         setSavedAddresses(newAddresses);
         localStorage.setItem('savedAddresses', JSON.stringify(newAddresses));
+
+        toast.error('Endereço Removido!', {
+            position: 'bottom-right',
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            bodyClassName: 'text-base',
+        });
     };
 
     return (

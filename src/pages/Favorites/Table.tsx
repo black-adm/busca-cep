@@ -1,36 +1,52 @@
+import { useState } from "react";
+import { useSaveAddress } from "../../hooks/useSaveAddress";
 import { Trash } from "@phosphor-icons/react";
+import { Pagination } from "./Pagination";
 
 export function Table() {
+    const [page, setPage] = useState<number>(0);
+    const [limit, setLimit] = useState<number>(5);
+    const { savedAddresses, removeAddress } = useSaveAddress();
+
+    const limitResults = savedAddresses.slice(page * limit, page * limit + limit);
+
     return (
         <tbody className="text-sm divide-y divide-gray-100">
-            <tr>
-                <td className="p-2 whitespace-nowrap">
-                    <div className="flex items-center">
+            {limitResults.map((address, index) => (
+                <tr key={index}>
+                    <td className="p-2 whitespace-nowrap">
                         <div className="font-medium text-black">
-                            Rua Not Found, 404
+                            {address.logradouro}&nbsp;{address.complemento}
                         </div>
-                    </div>
-                </td>
+                    </td>
 
-                <td className="p-2 whitespace-nowrap">
-                    <div className="text-left">127.0.0.1</div>
-                </td>
+                    <td className="p-2 whitespace-nowrap">
+                        <div className="text-left">{address.cep}</div>
+                    </td>
 
-                <td className="p-2 whitespace-nowrap">
-                    <div className="text-left font-medium text-green-500">
-                        JS
-                    </div>
-                </td>
+                    <td className="p-2 whitespace-nowrap">
+                        <div className="text-left font-medium text-green-500">{address.uf}</div>
+                    </td>
 
-                <td className="p-2 whitespace-nowrap">
-                    <div className="flex justify-center items-center">
-                        <Trash
-                            size={20}
-                            className="cursor-pointer hover:text-primary-red focus:text-primary-red"
-                        />
-                    </div>
-                </td>
-            </tr>
+                    <td className="p-2 whitespace-nowrap">
+                        <div className="flex justify-center items-center">
+                            <Trash
+                                size={20}
+                                className="cursor-pointer hover:text-primary-red focus:text-primary-red"
+                                onClick={() => removeAddress(index)}
+                            />
+                        </div>
+                    </td>
+                </tr>
+            ))}
+
+            <Pagination
+                page={page}
+                setPage={setPage}
+                savedAddresses={savedAddresses}
+                limit={limit}
+                setLimit={setLimit}
+            />
         </tbody>
-    )
+    );
 }
