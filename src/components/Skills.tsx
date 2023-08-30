@@ -50,15 +50,15 @@ export function Skills() {
                 <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     <img
                         className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg"
-                        alt="Ruby"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"                    
+                        alt="Node JS"
                         width={158}
                         height={48}
                     />
                     <img
                         className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"
-                        alt="Ruby on Rails"
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+                        alt="Express"
                         width={158}
                         height={48}
                     />

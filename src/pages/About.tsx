@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import {
+    ArrowLeft,
     Code,
     Handshake,
     MicrosoftOutlookLogo
@@ -9,8 +11,18 @@ export function About() {
     return (
         <div className="about overflow-x-hidden">
             <section>
-                <div className="mx-auto max-w-7xl px-8 py-12 lg:pt-28">
+                <div className="mx-auto max-w-7xl px-8 py-12 lg:pt-20">
                     <div className="mx-auto max-w-xl">
+                        <div className="flex items-center gap-x-2 mx-auto pb-10 text-white text-xs font-medium">
+                            <Link to='/'>
+                                <ArrowLeft
+                                    className="hover:bg-zinc-950 rounded-full "
+                                    color="white"
+                                    size={16}
+                                />
+                            </Link>
+                            Voltar
+                        </div>
                         <div>
                             <div className="md:flex md:items-center md:justify-between md:space-x-5">
                                 <div className="flex items-center space-x-5">
@@ -53,7 +65,7 @@ export function About() {
                                 </div>
                             </div>
 
-                            <div className="mt-24 text-sm font-medium">
+                            <div className="mt-20 sm:mt-24 text-sm font-medium">
                                 <h2 className="flex items-center gap-x-2 text-white">
                                     Sobre mim
                                     <Handshake size={16} />

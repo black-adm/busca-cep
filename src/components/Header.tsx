@@ -23,7 +23,7 @@ export function Header() {
                         </a>
 
                         <a
-                            href="/contato"
+                            href="/favoritos"
                             className="flex items-center gap-x-1 hover:text-bege"
                         >
                             <Star size={16} className="text-acid" />
