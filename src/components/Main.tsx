@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { SearchInput } from "./SearchInput";
 import { Button } from "./Button";
 import { AddressModal } from "./AddressModal";
@@ -7,8 +6,12 @@ import { fetchAddress } from "../services/api";
 
 import mapsImage from '../assets/maps.svg'
 
+type AddressProps = {
+    cep?: string;
+}
+
 export function Main() {
-    const [address, setAddress] = useState<any | null>(null);
+    const [address, setAddress] = useState<AddressProps | null>();
     const [isModalOpen, setModalIsOpen] = useState(false);
     const [cepInputValid, setCepInputValid] = useState<true | null>(null);
     const [cepError, setCepError] = useState(false);
@@ -80,7 +83,9 @@ export function Main() {
                     <Button onClick={openModal} disabledButton={!cepInputValid} />
                 </div>
                 {cepError && (
-                    <p className="text-primary-red text-xs mt-1">CEP inválido ou não encontrado, verifique o CEP digitado.</p>
+                    <p className="text-primary-red text-xs pt-2">
+                        CEP inválido ou não encontrado, verifique o CEP digitado.
+                    </p>
                 )}
             </div>
 
