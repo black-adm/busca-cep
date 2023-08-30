@@ -5,7 +5,7 @@ import {
     Handshake,
     MicrosoftOutlookLogo
 } from "@phosphor-icons/react";
-import { Skills } from "../components/Skills";
+import { Skills } from "./Skills";
 
 export function About() {
     return (

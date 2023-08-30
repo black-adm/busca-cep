@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { SearchInput } from "./SearchInput";
 import { Button } from "./Button";
-import { AddressModal } from "./AddressModal";
-import { fetchAddress } from "../services/api";
+import { AddressModal } from "../../components/AddressModal";
+import { fetchAddress } from "../../services/api";
 
-import mapsImage from '../assets/maps.svg'
+import mapsImage from '../../assets/maps.svg'
 
 type AddressProps = {
     cep?: string;
