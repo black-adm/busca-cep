@@ -11,7 +11,7 @@ Essas são as tecnologias utilizadas no projeto:
 ## Baixar e testar na sua máquina
 - Clone o projeto com o comando `git clone https://github.com/black-adm/busca-cep/`.
 - Após clonar o projeto, na pasta raiz digite `yarn install` ou `npm install` e rode o projeto após instalação.
-- 
+  
 ## Versão online
 > Fiz o deploy no Netlify, ainda falta algumas funcionalidades para adicionar ao projeto.
 > Clique no botão para visualizar a versão online.
