@@ -5,6 +5,7 @@ import {
     XCircle
 } from "@phosphor-icons/react";
 import worldMapsImg from '../assets/worldMap.svg'
+import { useSaveAddress } from "../hooks/useSaveAddress";
 
 interface AddressModalProps {
     isOpen: boolean;
@@ -13,6 +14,12 @@ interface AddressModalProps {
 }
 
 export function AddressModal({ isOpen, onRequestClose, address }: AddressModalProps) {
+    const { addAddress } = useSaveAddress();
+
+    const handleSaveAddress = () => {
+        addAddress(address);
+        onRequestClose();
+    }
 
     const handleModalClose = () => {
         onRequestClose();
@@ -109,6 +116,7 @@ export function AddressModal({ isOpen, onRequestClose, address }: AddressModalPr
                                 <div className="flex justify-center sm:justify-end mt-6">
                                     <button
                                         type="button"
+                                        onClick={handleSaveAddress}
                                         className="flex items-center gap-x-2 px-6 py-2.5 text-sm font-semibold tracking-wide bg-acid text-dark transition-colors rounded-md hover:bg-bege focus:bg-bege"
                                     >
                                         Salvar nos favoritos
